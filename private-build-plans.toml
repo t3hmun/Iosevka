@@ -1,0 +1,3 @@
+[buildPlans.mun]
+   family = "mun"
+   design = ["cv02", "cv04", "cv08", "cv12", "cv13", "cv17", "cv18", "cv21", "cv23", "cv25", "cv29", "cv32", "cv35", "cv36", "cv39", "cv40", "cv42", "cv45", "cv47", "cv49", "cv51", "cv53"]
