@@ -61,5 +61,4 @@ glyphs/*.js
 
 package-lock.json
 private.toml
-private-build-plans.toml
 private.mk
