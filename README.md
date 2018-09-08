@@ -1,8 +1,13 @@
-# Iosevka ![Version](https://img.shields.io/github/release/be5invis/Iosevka.svg) [![Patreon](https://img.shields.io/badge/donate-patreon-red.svg)](https://www.patreon.com/user?u=5787198) [![Donate](https://img.shields.io/badge/donate-alipay-orange.svg)](http://7xpdnl.dl1.z0.glb.clouddn.com/T1v4huXnleXXXXXXXX.png)
+# Mun Custom Iosevka
 
-Coders’ typeface, built from code.
+This is my custom variant of Iosevka, it is really just a `private-build-plans.toml` file.
 
-![](https://raw.githubusercontent.com/be5invis/Iosevka/master/images/preview-all.png)
+Go to the [release page](https://github.com/t3hmun/Iosevka/releases) to get my latest build of this font.
+
+Original readme continued...
+
+Iosevka is a neat monospace font that allows you to rebuild it with a custom selection from a wide variety of options.
+Visit the [otriginal repo](https://github.com/be5invis/Iosevka) to learn more.
 
 ## Installation
 
