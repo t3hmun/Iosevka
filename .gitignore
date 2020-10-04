@@ -33,6 +33,7 @@ node_modules
 *.7z
 test/
 preview/
+.build/
 build/
 dist/
 ref/
@@ -40,25 +41,18 @@ pages/
 releases/
 release-archives/
 testdrive/iosevka*
-snapshot/iosevka*
-snapshot/index.css
 
 # Generated scripts
-.buildglyphs.all.patel
-buildglyphs.js
-parameters.js
-support/glyph.js
-support/point.js
-support/anchor.js
-support/transform.js
-support/simple-expand.js
-support/spiroexpand.js
-support/spirokit.js
-support/utils.js
-meta/*.js
-meta/feature/*.js
-glyphs/*.js
+font-src/gen/build-glyphs.js
+font-src/gen/kits/**/*.js
+font-src/meta/**/*.js
+font-src/otl/**/*.js
+font-src/glyphs/**/*.js
 
 package-lock.json
 private.toml
 private.mk
+params/private-parameters.toml
+
+# Ignore tmp directory
+tmp

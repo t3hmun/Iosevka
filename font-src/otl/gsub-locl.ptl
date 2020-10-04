@@ -1,0 +1,50 @@
+import [copy-language add-feature add-lookup BeginLookupBlock EndLookupBlock] from "./table-util"
+
+export : define [buildLOCL sink para] : begin
+	local rec : BeginLookupBlock sink
+
+	define cyrlSRB  : copy-language sink 'cyrl_SRB ' 'cyrl_DFLT'
+	define cyrlMKD  : copy-language sink 'cyrl_MKD ' 'cyrl_DFLT'
+	define cyrlBGR  : copy-language sink 'cyrl_BGR ' 'cyrl_DFLT'
+
+	# SRB
+	define loclSRB : add-feature sink 'locl'
+	cyrlSRB.features.unshift loclSRB.name
+	cyrlMKD.features.unshift loclSRB.name
+	loclSRB.lookups.push : add-lookup sink : object
+		type 'gsub_single'
+		subtables : list : if para.isItalic
+			object
+				'cyrl/be'    'cyrl/be.SRB'
+				'cyrl/ghe'   'cyrl/ghe.SRB'
+				'cyrl/de'    'cyrl/de.SRB'
+				'cyrl/pe'    'cyrl/pe.SRB'
+				'cyrl/te'    'cyrl/te.SRB'
+			object
+				'cyrl/be'    'cyrl/be.SRB'
+
+	# BGR
+	define loclBGR : add-feature sink 'locl'
+	cyrlBGR.features.unshift loclBGR.name
+	loclBGR.lookups.push : add-lookup sink : object
+		type 'gsub_single'
+		subtables : list : object
+			'cyrl/ve'     'cyrl/ve.BGR'
+			'cyrl/ghe'    'cyrl/ghe.italic'
+			'cyrl/de'     'cyrl/de.BGR'
+			'cyrl/zhe'    'cyrl/zhe.BGR'
+			'cyrl/ze'     'cyrl/ze.BGR'
+			'cyrl/i'      'cyrl/i.BGR'
+			'cyrl/ibreve' 'cyrl/ibreve.BGR'
+			'cyrl/igrave' 'cyrl/igrave.BGR'
+			'cyrl/ka'     'k'
+			'cyrl/El'     'Lambda'
+			'cyrl/el'     'turnv'
+			'cyrl/pe'     'n'
+			'cyrl/te'     'm.normal'
+			'cyrl/sha'    'cyrl/sha.italic'
+			'cyrl/shcha'  'cyrl/shcha.italic'
+			'cyrl/yu'     'cyrl/yu.BGR'
+			'cyrl/tse'    'cyrl/tse.italic'
+
+	EndLookupBlock.Front rec sink
