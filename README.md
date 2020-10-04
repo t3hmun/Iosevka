@@ -3,10 +3,10 @@
 This is my custom variant of Iosevka. My commits consist of:
 
 * A `private-build-plans.toml` file, defines my style
-* `Dockerfile` and `.dockerignore` I use for building - you wont need node.js on the host system
+* `Dockerfile` and `.dockerignore` I use for building - no need for node.js on the host system
 
 
-# How to Build
+# Containered Build Instructions
 
 *Optional* Merge in the latest upstream Iosevka
 
@@ -34,8 +34,12 @@ If you are using bash, swap out `$pwd` for `"$(pwd)"`
 docker run -it --rm -v $pwd/dist:/build/dist iosevka_builder
 ```
 
-Finally trigger the build you want.
+Finally trigger the build you want (this is what the main Iosevka readme instructs):
 
 ```bash
 npm run build -- contents::mun
 ```
+
+The build is rather large, watch the output fly past. Afterwards you and type `exit` to leave the containter.
+
+Reap your reward from the `./dist` folder.
