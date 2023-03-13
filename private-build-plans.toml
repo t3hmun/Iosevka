@@ -1,0 +1,34 @@
+[buildPlans.mun]
+family = "mun"
+spacing = "normal"
+serifs = "sans"
+no-cv-ss = true
+export-glyph-names = false
+
+[buildPlans.mun.variants.design]
+capital-j = "serifless"
+capital-l = "serifless"
+capital-q = "crossing"
+capital-w = "straight"
+capital-z = "straight-serifless"
+a = "double-storey-tailed"
+c = "serifless"
+f = "tailed"
+g = "single-storey-serifless"
+i = "hooky"
+j = "serifed"
+l = "tailed"
+x = "straight-serifless"
+y = "straight-turn"
+long-s = "flat-hook-tailed"
+zero = "slashed"
+one = "base"
+two = "straight-neck"
+three = "two-arcs"
+four = "semi-open"
+five = "vertical-upper-left-bar"
+seven = "straight-serifless"
+brace = "curly"
+at = "fourfold"
+question = "smooth"
+
